@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="548.0" prefWidth="1020.0" style="-fx-background-color: #c8d6e5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddToServiceFormController">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="73.0" prefHeight="355.0" prefWidth="223.0" style="-fx-background-color: white;">
+         <effect>
+            <BoxBlur height="59.64" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="7.0" layoutY="2.0" prefHeight="48.0" prefWidth="1001.0" style="-fx-background-color: #1911ae; -fx-background-radius: 20;" text="   Add To Service " textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSID" labelFloat="true" layoutX="39.0" layoutY="96.0" onAction="#moveToVehicleNumber" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="169.0" promptText="SID" style="-fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVehicleNumber" labelFloat="true" layoutX="40.0" layoutY="167.0" onAction="#Vehicle_Search_OnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="169.0" promptText="vehicle Number">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtVehicleModel" labelFloat="true" layoutX="39.0" layoutY="237.0" prefHeight="25.0" prefWidth="169.0" promptText="Vehicle Type">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtFullType" labelFloat="true" layoutX="39.0" layoutY="309.0" prefHeight="25.0" prefWidth="169.0" promptText="Fual Type">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cmbServiceType" labelFloat="true" layoutX="39.0" layoutY="375.0" prefHeight="25.0" prefWidth="169.0" promptText="Service Type" />
+      <TableView fx:id="tblAddtoService" layoutX="257.0" layoutY="108.0" onMouseClicked="#table_Click_OnAction" prefHeight="393.0" prefWidth="746.0">
+        <columns>
+          <TableColumn fx:id="colSID" prefWidth="105.0" text="SID" />
+          <TableColumn fx:id="colVN" prefWidth="165.0" text="Vehicle Number" />
+            <TableColumn fx:id="colVM" prefWidth="165.0" text="Vehicle Type" />
+            <TableColumn fx:id="colFT" prefWidth="153.0" text="Fual Type" />
+            <TableColumn fx:id="colST" prefWidth="156.0" text="Service Type" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <TextField fx:id="txtSearchVehicleNumber" layoutX="823.0" layoutY="68.0" onAction="#Search_VNumber_OnAction" prefHeight="25.0" prefWidth="180.0" promptText="Search" />
+      <Label layoutX="695.0" layoutY="68.0" prefHeight="25.0" prefWidth="108.0" text="Vehicle Number :">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="185.0" layoutY="28.0" prefHeight="0.0" prefWidth="807.0" />
+      <JFXButton fx:id="btnDelete" layoutX="125.0" layoutY="497.0" onAction="#Delete_Service_OnAction" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <BoxBlur height="0.0" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="29.0" layoutY="497.0" onAction="#Add_To_Service_OnAction" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: blue;" text="Add" textFill="#fcfcfc">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="53.0" layoutY="440.0" onAction="#Full_Service_OnAction" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: yellow; -fx-background-radius: 10;" text="Full Service Package">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

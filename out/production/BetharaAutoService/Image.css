@@ -1,0 +1,17 @@
+.bodybg{
+    -fx-background-image: url('Image.jpg');
+    -fx-background-size: 100% 100%;
+}
+.table-view{
+   -fx-background-color: blue;
+}
+.table-view .column-header{
+    -fx-size:20px;
+    -fx-background-color: #7708f5;
+}
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-radius: 8px;
+}

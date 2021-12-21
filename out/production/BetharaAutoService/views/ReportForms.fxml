@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ReportsContext" prefHeight="313.0" prefWidth="479.0" style="-fx-background-radius: 30; -fx-background-color: #25CCF7; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportFormsController">
+   <children>
+      <Label layoutX="14.0" layoutY="3.0" prefHeight="47.0" prefWidth="226.0" text="    REPORTS " textFill="#dd1515">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="50.0" prefHeight="18.0" prefWidth="479.0" style="-fx-background-color: black;" />
+      <AnchorPane layoutX="3.0" layoutY="76.0" prefHeight="227.0" prefWidth="471.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 30;">
+         <children>
+            <JFXButton fx:id="btnCustomer" buttonType="RAISED" layoutX="139.0" layoutY="27.0" onMouseClicked="#generate_SQLReports" prefHeight="24.0" prefWidth="193.0" style="-fx-background-color: #EAB543;" text="Customers" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnServiceDetails" buttonType="RAISED" layoutX="139.0" layoutY="141.0" onMouseClicked="#generateSQLReports" prefHeight="24.0" prefWidth="193.0" style="-fx-background-color: #EAB543;" text="Service Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnEmployee" buttonType="RAISED" layoutX="139.0" layoutY="84.0" onMouseClicked="#generateSQLReport" prefHeight="24.0" prefWidth="193.0" style="-fx-background-color: #EAB543;" text="Employee Salary" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

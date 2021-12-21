@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainDashBoardContext" prefHeight="548.0" prefWidth="1035.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#131a61" height="549.0" layoutX="53.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="116.0">
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect></Rectangle>
+      <JFXButton fx:id="btnCustomer" layoutX="-6.0" layoutY="14.0" onAction="#customerFormOnAction" prefHeight="42.0" prefWidth="172.0" ripplerFill="#140606" style="-fx-background-color: #1B9CFC;" text="       Customers" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAppointment" layoutX="-6.0" layoutY="75.0" onAction="#Open_AppointmentForm" prefHeight="42.0" prefWidth="172.0" ripplerFill="#0d0303" style="-fx-background-color: #1B9CFC;" text="         Appointment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnVehicle" layoutX="-6.0" layoutY="136.0" onAction="#vehicle_Add_Form" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="  Vehicles" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="dashBoardContext" layoutX="168.0" prefHeight="549.0" prefWidth="1020.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="344.0" fitWidth="897.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Capture.JPG" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="0.02" contrast="0.03" hue="0.1" saturation="0.07" />
+               </effect>
+            </ImageView>
+            <AnchorPane layoutX="701.0" layoutY="-1.0" prefHeight="201.0" prefWidth="193.0" style="-fx-background-color: #ecf0f1;" />
+            <AnchorPane layoutX="895.0" layoutY="-7.0" prefHeight="556.0" prefWidth="128.0" style="-fx-background-color: #131a61;">
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect></AnchorPane>
+            <AnchorPane layoutX="2.0" prefHeight="233.0" prefWidth="851.0" style="-fx-background-color: #ecf0f1;">
+               <children>
+                  <Label layoutX="102.0" layoutY="51.0" prefHeight="59.0" prefWidth="742.0" text="   BETHARA AUTO SERVICE CENTER" textFill="#3f1eab" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold Italic" size="41.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="0.0" color="#f9f9ff" elevation="124.53" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                     <tooltip>
+                        <Tooltip text="Empty Tooltip" />
+                     </tooltip>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="12.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/vehicle.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnEmployee" layoutX="-6.0" layoutY="321.0" onAction="#Add_Employee_OnAction" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="        Employees" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="12.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/employee.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnService" layoutX="-6.0" layoutY="199.0" onAction="#vehicle_AddTo_Service_Form" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="         Add To Service" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="12.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/service.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnReturn" layoutX="-6.0" layoutY="260.0" onAction="#vehicle_Return_Form" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="         Vehicle Return" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="12.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/retun.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSalary" layoutX="-6.0" layoutY="378.0" onAction="#Salary_On_Action" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="       Emp  Salary" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnIncome" layoutX="-6.0" layoutY="434.0" onAction="#ReportsFormOnAction" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="   Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/salary.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/statistics-report.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnLogOut" layoutX="-6.0" layoutY="493.0" onAction="#LogOut_On_Action" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #1B9CFC;" text="    Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="42.0" layoutX="12.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logout-rounded-left.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="30.0" layoutX="12.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/appoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="12.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 20;">
+         <image>
+            <Image url="@../img/addcus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

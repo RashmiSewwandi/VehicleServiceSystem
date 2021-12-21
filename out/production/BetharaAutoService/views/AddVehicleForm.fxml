@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="548.0" prefWidth="1020.0" style="-fx-background-color: #c8d6e5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddVehicleFormController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="60.0" prefHeight="478.0" prefWidth="209.0" style="-fx-background-color: white;">
+         <effect>
+            <BoxBlur height="63.75" width="0.0" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="8.0" layoutY="6.0" prefHeight="41.0" prefWidth="1008.0" style="-fx-background-color: #1911ae; -fx-background-radius: 20;" text="    Add Vehicle  " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAppointmentNumber" labelFloat="true" layoutX="22.0" layoutY="74.0" onAction="#Search_Customer_OnAction" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="180.0" promptText="Appointment Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNIC" labelFloat="true" layoutX="22.0" layoutY="129.0" prefHeight="31.0" prefWidth="180.0" promptText="NIC">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="22.0" layoutY="191.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="180.0" promptText="Customer Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVehicleNumber" labelFloat="true" layoutX="22.0" layoutY="259.0" onAction="#moveToVehicleModel" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="180.0" promptText="Vehicle Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVehicleModel" labelFloat="true" layoutX="22.0" layoutY="321.0" onKeyReleased="#textFields_Key_Released" prefHeight="25.0" prefWidth="180.0" promptText="Vehicle Type">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbFullType" labelFloat="true" layoutX="22.0" layoutY="387.0" prefHeight="31.0" prefWidth="180.0" promptText="Select Fual Type" />
+      <Label layoutX="22.0" layoutY="447.0" prefHeight="23.0" prefWidth="54.0" text="Date   :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="102.0" layoutY="438.0" prefHeight="41.0" prefWidth="105.0" text="12.20.2021">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblVehicle" layoutX="240.0" layoutY="110.0" onMouseClicked="#table_Click_OnAction" prefHeight="386.0" prefWidth="766.0">
+        <columns>
+          <TableColumn fx:id="colAppointment" prefWidth="95.0" sortType="DESCENDING" text="Appointment" />
+          <TableColumn fx:id="colCustomerName" prefWidth="188.0" text="Customer Name" />
+            <TableColumn fx:id="colVehicleNumber" prefWidth="136.0" text="Vehicle Number" />
+            <TableColumn fx:id="colVehicleModel" prefWidth="129.0" text="Vehicle Type" />
+            <TableColumn fx:id="colFualType" prefWidth="118.0" text="Fual Type" />
+            <TableColumn fx:id="colDate" prefWidth="99.0" text="Date" />
+        </columns>
+         <effect>
+            <DropShadow radius="10.7425" width="23.97" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Separator layoutX="190.0" layoutY="25.0" prefHeight="4.0" prefWidth="804.0" />
+      <JFXButton fx:id="btnAddVehicle" layoutX="240.0" layoutY="507.0" onAction="#vehicle_Add_OnAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: #0652DD;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="338.0" layoutY="507.0" onAction="#Delete_Vehicle_OnAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtSearch" layoutX="797.0" layoutY="62.0" onAction="#Search_Customer" prefHeight="25.0" prefWidth="209.0" promptText="Search" style="-fx-background-radius: 10;" />
+      <Label layoutX="676.0" layoutY="62.0" prefHeight="25.0" prefWidth="115.0" text="Customer Name :">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
